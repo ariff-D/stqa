@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      table, tr, td{
+         border: 1px solid burlywood;
+         border-collapse: collapse;
+      }
+   </style>
+</head>
+<body>
+   <h1>STUDENT TABLE</h1>
+   <table>
+      <thead>
+         <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Subj1</th>
+            <th>Subj2</th>
+            <th>Subj3</th>
+         </tr>
+      </thead>
+      {% for row in data %}
+      <tbody>
+         <td>{{row['id']}}</td>
+         <td>{{row['name']}}</td>
+         <td>{{row['gender']}}</td>
+         <td>{{row['subj1']}}</td>
+         <td>{{row['subj2']}}</td>
+         <td>{{row['subj3']}}</td>
+      </tbody>
+      {% endfor %}
+   </table>
+</body>
+</html>
